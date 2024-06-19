@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .title-1 {
+            color: #fff;
+            font-size: 25px;
+            background-color: Brown;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .add {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 10px;
+            color: #f1f1f1;
+        }
+        .marque-container {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 95%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        marquee {
+            font-size: 20px;
+            color: red;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-field {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #007bb5;
+            text-align: left;
+            display: block;
+        }
+        input, select {
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bb5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #005f8b;
+        }
+        
+        /* Checkbox Styling */
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            width: 45%;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-item label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-1">
+            <h1>Origin Solutions</h1>
+            <p class="add">Hyderabad,506204</p>
+        </div>
+        <div class="marque-container">
+            <marquee>Welcome to the Employee Registration Form for Origin. Please fill out the form below to register.</marquee>
+        </div>
+        <br>
+        <form>
+            <div class="form-field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
+            </div>
+            <div class="form-field">
+                <label for="id">Employee ID</label>
+                <input type="text" id="id" name="id" placeholder="Enter Your ID" required>
+            </div>
+			<div class="form-field">
+                <label for="pos">Position</label>
+                <input type="text" id="pos" name="pos" placeholder="Enter Your Position" required>
+            </div>
+            <div class="form-field">
+                <label for="Contact">Contact number</label>
+                <input type="text" id="Contact" name="Contact" placeholder="Enter Your Contact number" required>
+            </div>
+            <div class="form-field">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="DOB">Date Of Birth</label>
+                <input type="text" id="DOB" name="DOB" placeholder="Enter Your Date Of Birth" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Id" required>
+            </div>
+			
+            <div class="form-field">
+                <label for="photo">Upload Recent Photograph</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <div class="form-field">
+                <label>Select Your Preferred Office Locations</label>
+                <br>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hyd" name="location[]" value="hyd">
+                        <label for="hyd">Hyderabad</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="wgl" name="location[]" value="wgl">
+                        <label for="wgl">Warangal</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="any" name="location[]" value="any">
+                        <label for="any">Any location</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
